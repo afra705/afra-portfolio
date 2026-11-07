@@ -23,7 +23,7 @@ export default function Services() {
       <div className="container-x relative">
         <SectionHeading
           id="serv-h"
-          eyebrow="05 — Services"
+          eyebrow="06 — Services"
           title={
             <>
               How we can{" "}

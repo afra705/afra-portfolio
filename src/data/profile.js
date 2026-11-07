@@ -6,7 +6,7 @@ export const profile = {
   tagline: "I build modern, responsive and user-friendly digital experiences.",
   intro:
     "I'm a web developer who enjoys turning ideas into clean, fast interfaces, and I'm also interested in digital marketing and helping businesses grow online.",
-  email: "afraa.code@gmail.com",
+  email: "afraanjum896@gmail.com",
   phone: "", // e.g. "+8801XXXXXXXXX"  (hidden while empty)
   whatsapp: "01854714705", // digits only, e.g. "8801XXXXXXXXX" (hidden while empty)
   profileImage: "/images/afra.jpeg", // drop your photo here; falls back to initials
@@ -15,7 +15,7 @@ export const profile = {
   socials: {
     github: "https://github.com/afra705/afra705",
     linkedin: "https://www.linkedin.com/in/afra-anjum-dev",
-    facebook: "",
+    facebook: "https://www.facebook.com/afra705",
     twitter: "",
   },
   // --- About (edit freely) ---

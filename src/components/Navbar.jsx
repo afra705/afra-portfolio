@@ -11,6 +11,7 @@ const links = [
   ["skills", "Skills"],
   ["experience", "Experience"],
   ["projects", "Projects"],
+  ["designs", "Designs"],
   ["services", "Services"],
   ["contact", "Contact"],
 ];
@@ -34,7 +35,9 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!onHome) {
-      setActive(pathname.startsWith("/projects") ? "projects" : "");
+      if (pathname.startsWith("/projects")) setActive("projects");
+      else if (pathname.startsWith("/designs")) setActive("designs");
+      else setActive("");
       return;
     }
     const elements = links.map(([id]) => document.getElementById(id)).filter(Boolean);

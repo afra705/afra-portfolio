@@ -5,6 +5,8 @@ export default function ProjectImage({
   alt,
   name,
   className = "",
+  width,
+  height,
 }) {
   const [failed, setFailed] = useState(false);
 
@@ -27,6 +29,8 @@ export default function ProjectImage({
       src={src}
       alt={alt}
       loading="lazy"
+      width={width}
+      height={height}
       onError={() => setFailed(true)}
       className={`block w-full max-w-none ${className}`}
     />

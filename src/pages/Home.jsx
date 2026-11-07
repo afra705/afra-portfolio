@@ -5,6 +5,7 @@ import About from "../sections/About.jsx";
 import Skills from "../sections/Skills.jsx";
 import Experience from "../sections/Experience.jsx";
 import Projects from "../sections/Projects.jsx";
+import Designs from "../sections/Designs.jsx";
 import Services from "../sections/Services.jsx";
 import Contact from "../sections/Contact.jsx";
 import { scrollToId } from "../utils/scroll.js";
@@ -27,6 +28,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Projects />
+      <Designs />
       <Services />
       <Contact />
     </>

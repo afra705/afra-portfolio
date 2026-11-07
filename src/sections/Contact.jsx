@@ -32,7 +32,7 @@ export default function Contact() {
           <div className="min-w-0">
             <SectionHeading
               id="contact-h"
-              eyebrow="06 — Contact"
+              eyebrow="07 — Contact"
               title={
                 <>
                   Have an idea?{" "}

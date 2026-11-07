@@ -180,69 +180,75 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Kinetic headline */}
-        <motion.h1
-          style={reduce ? undefined : { y: headlineY, opacity: headlineOpacity }}
-          className="display mt-6 text-[clamp(2.5rem,7.8vw,6.6rem)] leading-[0.9] text-cream sm:mt-8"
-        >
-          <MaskLine delay={0.12}>Designing digital</MaskLine>
-          <MaskLine delay={0.2}>experiences that</MaskLine>
-          <MaskLine delay={0.28}>
-            <span className="inline-flex items-baseline gap-[0.12em]">
-              <em className="font-serif font-normal italic tracking-[-0.02em] text-gradient">move</em>
-              <span className="text-zinc-500">people.</span>
-            </span>
-          </MaskLine>
-        </motion.h1>
+        {/* Headline + portrait */}
+        <div className="mt-8 grid gap-12 lg:mt-10 lg:grid-cols-[1.15fr_auto] lg:items-center lg:gap-16">
+          <div className="min-w-0">
+            <motion.h1
+              style={reduce ? undefined : { y: headlineY, opacity: headlineOpacity }}
+              className="display text-[clamp(2.4rem,5.6vw,5.5rem)] leading-[0.92] text-cream"
+            >
+              <MaskLine delay={0.12}>Designing digital</MaskLine>
+              <MaskLine delay={0.2}>experiences that</MaskLine>
+              <MaskLine delay={0.28}>
+                <span className="inline-flex items-baseline gap-[0.12em]">
+                  <em className="font-serif font-normal italic tracking-[-0.02em] text-gradient">
+                    move
+                  </em>
+                  <span className="text-zinc-500">people.</span>
+                </span>
+              </MaskLine>
+            </motion.h1>
 
-        {/* Content grid */}
-        <div className="mt-8 grid gap-12 lg:mt-10 lg:grid-cols-[1.25fr_auto] lg:items-center lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.5, ease }}
-            className="min-w-0 max-w-2xl"
-          >
-            <p className="text-base leading-relaxed text-zinc-400 sm:text-lg">
-              I'm <span className="font-semibold text-cream">{profile.name}</span> — a frontend developer
-              and digital marketer crafting fast, expressive interfaces that also{" "}
-              <span className="text-accent">grow the business behind them.</span>
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.5, ease }}
+              className="mt-6 max-w-xl"
+            >
+              <p className="text-base leading-relaxed text-zinc-400 sm:text-lg">
+                I'm <span className="font-semibold text-cream">{profile.name}</span> — a frontend
+                developer and digital marketer crafting fast, expressive interfaces that also{" "}
+                <span className="text-accent">grow the business behind them.</span>
+              </p>
 
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Magnetic>
-                <button
-                  type="button"
-                  onClick={() => scrollToId("projects")}
-                  className="btn btn-primary shine group"
-                >
-                  Explore selected work
-                  <ArrowDownRight
-                    size={17}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
-                  />
-                </button>
-              </Magnetic>
-              {profile.resumeAvailable ? (
-                <a href={profile.resumeUrl} download className="btn btn-ghost group">
-                  Download resume
-                  <Download size={16} className="transition-transform group-hover:translate-y-0.5" />
-                </a>
-              ) : (
-                <button type="button" disabled title="Resume coming soon" className="btn btn-ghost">
-                  Download resume <Download size={16} />
-                </button>
-              )}
-            </div>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Magnetic>
+                  <button
+                    type="button"
+                    onClick={() => scrollToId("projects")}
+                    className="btn btn-primary shine group"
+                  >
+                    Explore selected work
+                    <ArrowDownRight
+                      size={17}
+                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+                    />
+                  </button>
+                </Magnetic>
+                {profile.resumeAvailable ? (
+                  <a href={profile.resumeUrl} download className="btn btn-ghost group">
+                    Download resume
+                    <Download
+                      size={16}
+                      className="transition-transform group-hover:translate-y-0.5"
+                    />
+                  </a>
+                ) : (
+                  <button type="button" disabled title="Resume coming soon" className="btn btn-ghost">
+                    Download resume <Download size={16} />
+                  </button>
+                )}
+              </div>
 
-            <div className="mt-9 flex items-center gap-4">
-              <SocialLinks />
-              <span className="hidden h-px w-12 bg-white/15 sm:block" />
-              <span className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-600 sm:block">
-                Say hello
-              </span>
-            </div>
-          </motion.div>
+              <div className="mt-8 flex items-center gap-4">
+                <SocialLinks />
+                <span className="hidden h-px w-12 bg-white/15 sm:block" />
+                <span className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-600 sm:block">
+                  Say hello
+                </span>
+              </div>
+            </motion.div>
+          </div>
 
           {/* Portrait card */}
           <motion.div
@@ -250,7 +256,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.22, ease }}
             style={reduce ? undefined : { y: portraitY, scale: portraitScale }}
-            className="relative mx-auto w-full max-w-[15rem] min-w-0 sm:max-w-[16.5rem] lg:mx-0"
+            className="relative mx-auto w-full max-w-[16rem] min-w-0 sm:max-w-[18rem] lg:mx-0 lg:max-w-[19rem]"
           >
             <div className="pointer-events-none absolute -inset-6 animate-spin-slow sm:-inset-8">
               <svg viewBox="0 0 200 200" className="h-full w-full">

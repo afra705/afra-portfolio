@@ -8,6 +8,7 @@ import CursorGlow from "./components/CursorGlow.jsx";
 import ScrollProgress from "./components/ScrollProgress.jsx";
 import Home from "./pages/Home.jsx";
 import AllProjects from "./pages/AllProjects.jsx";
+import AllDesigns from "./pages/AllDesigns.jsx";
 import ProjectDetails from "./pages/ProjectDetails.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
@@ -36,6 +37,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<AllProjects />} />
           <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/designs" element={<AllDesigns />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </motion.div>
